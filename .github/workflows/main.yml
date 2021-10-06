@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: curl
-      run: curl -X GET https://api.github.com/repos/nihar30/JestReport/commits | grep -w sha >> "./output.csv"
+      run: curl -X GET https://api.github.com/repos/nihar30/JestReport/commits >> "./output.csv"
 
     - name: Upload a Test Artifact
       uses: actions/upload-artifact@v2.2.4
